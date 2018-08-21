@@ -1,0 +1,8 @@
+xmsgeom/geometry/geoms.cpp
+xmsgeom/geometry/GmExtents.cpp
+xmsgeom/geometry/GmMultiPolyIntersectionSorterTerse.cpp
+xmsgeom/geometry/GmMultiPolyIntersector.cpp
+xmsgeom/geometry/GmPolygon.cpp
+xmsgeom/geometry/GmPolyLinePtRedistributer.cpp
+xmsgeom/geometry/GmPtSearch.cpp
+xmsgeom/geometry/GmTriSearch.cpp
