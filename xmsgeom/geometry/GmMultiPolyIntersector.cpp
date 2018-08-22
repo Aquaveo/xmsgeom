@@ -11,7 +11,7 @@
 // 1. Precompiled header
 
 // 2. My own header
-#include <xmsinterp/geometry/GmMultiPolyIntersector.h>
+#include <xmsgeom/geometry/GmMultiPolyIntersector.h>
 
 // 3. Standard library headers
 
@@ -34,10 +34,10 @@
 #include <xmscore/points/pt.h>               // Pt3d
 #include <xmscore/stl/set.h>                 // Set*
 #include <xmscore/stl/vector.h>              // Vec*
-#include <xmsinterp/geometry/GmBoostTypes.h> // GmBstPoly3d, XmBstRing
-#include <xmsinterp/geometry/GmMultiPolyIntersectionSorter.h> // GmMultiPolyIntersectionSorter
-#include <xmsinterp/geometry/GmMultiPolyIntersectorData.h> // GmMultiPolyIntersectorData
-#include <xmsinterp/geometry/geoms.h> // gmPolygonArea, gmAddToExtents, gmXyDistance
+#include <xmsgeom/geometry/GmBoostTypes.h> // GmBstPoly3d, XmBstRing
+#include <xmsgeom/geometry/GmMultiPolyIntersectionSorter.h> // GmMultiPolyIntersectionSorter
+#include <xmsgeom/geometry/GmMultiPolyIntersectorData.h> // GmMultiPolyIntersectorData
+#include <xmsgeom/geometry/geoms.h> // gmPolygonArea, gmAddToExtents, gmXyDistance
 
 //----- Forward declarations ---------------------------------------------------
 
@@ -575,11 +575,11 @@ void GmMultiPolyIntersectorImpl::TraverseLineSegmentAll(
 ///////////////////////////////////////////////////////////////////////////////
 #ifdef CXX_TEST
 
-#include <xmsinterp/geometry/GmMultiPolyIntersector.t.h>
+#include <xmsgeom/geometry/GmMultiPolyIntersector.t.h>
 
 #include <xmscore/testing/TestTools.h>
-#include <xmsinterp/geometry/GmMultiPolyIntersectionSorterTerse.h>
-#include <xmsinterp/triangulate/triangles.h>
+#include <xmsgeom/geometry/GmMultiPolyIntersectionSorterTerse.h>
+#include <xmsgeom/triangulate/triangles.h>
 
 //----- Namespace declaration --------------------------------------------------
 

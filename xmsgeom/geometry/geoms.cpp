@@ -10,7 +10,7 @@
 // 1. Precompiled header
 
 // 2. My own header
-#include <xmsinterp/geometry/geoms.h>
+#include <xmsgeom/geometry/geoms.h>
 
 // 3. Standard library headers
 #include <cfloat>
@@ -23,9 +23,9 @@
 #include <xmscore/misc/XmError.h>
 #include <xmscore/points/pt.h> // Pt3d
 #include <xmscore/stl/vector.h>
-#include <xmsinterp/geometry/GmPolygon.h>
+#include <xmsgeom/geometry/GmPolygon.h>
 #include <xmscore/misc/xmstype.h> // XM_ZERO_TOL
-#include <xmsinterp/triangulate/triangles.h>
+#include <xmsgeom/triangulate/triangles.h>
 #include <xmscore/misc/XmConst.h>
 
 // 6. Non-shared code headers
@@ -2150,8 +2150,8 @@ double gm2DDistanceToLineWithTol(const Pt3d* a_pt1,
 #include <boost/timer/timer.hpp>
 
 #include <xmscore/testing/TestTools.h>
-#include <xmsinterp/geometry/GmPolygon.t.h>
-#include <xmsinterp/geometry/geoms.t.h>
+#include <xmsgeom/geometry/GmPolygon.t.h>
+#include <xmsgeom/geometry/geoms.t.h>
 #include <xmscore/misc/XmLog.h>
 
 //----- Namespace declaration --------------------------------------------------

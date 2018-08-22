@@ -10,7 +10,7 @@
 // 1. Precompiled header
 
 // 2. My own header
-#include <xmsinterp/geometry/GmPolygon.h>
+#include <xmsgeom/geometry/GmPolygon.h>
 
 // 3. Standard library headers
 
@@ -24,7 +24,7 @@
 
 // 5. Shared code headers
 #include <xmscore/misc/XmError.h>
-#include <xmsinterp/geometry/GmBoostTypes.h> // GmBstPoly3d, GmBstRing3d
+#include <xmsgeom/geometry/GmBoostTypes.h> // GmBstPoly3d, GmBstRing3d
 #include <xmscore/misc/boost_defines.h>
 
 // 6. Non-shared code headers
@@ -300,14 +300,14 @@ BSHP<GmPolygon> GmPolygon::New()
 // UNIT TESTS
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <xmsinterp/geometry/GmPolygon.t.h>
+#include <xmsgeom/geometry/GmPolygon.t.h>
 
 #include <boost/assign.hpp>
 #include <boost/timer/timer.hpp>
 
 #include <xmscore/testing/TestTools.h>
-#include <xmsinterp/geometry/geoms.h>
-#include <xmsinterp/geometry/geoms.t.h>
+#include <xmsgeom/geometry/geoms.h>
+#include <xmsgeom/geometry/geoms.t.h>
 #include <xmscore/misc/carray.h>
 
 //----- Namespace declaration --------------------------------------------------

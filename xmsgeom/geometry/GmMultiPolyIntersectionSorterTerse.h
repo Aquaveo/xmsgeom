@@ -14,7 +14,7 @@
 // 4. External Library Headers
 
 // 5. Shared Headers
-#include <xmsinterp/geometry/GmMultiPolyIntersectionSorter.h>
+#include <xmsgeom/geometry/GmMultiPolyIntersectionSorter.h>
 
 // 6. Non-shared Headers
 

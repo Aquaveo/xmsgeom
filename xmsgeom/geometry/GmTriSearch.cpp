@@ -13,7 +13,7 @@
 // 1. Precompiled header
 
 // 2. My header
-#include <xmsinterp/geometry/GmTriSearch.h>
+#include <xmsgeom/geometry/GmTriSearch.h>
 
 // 3. Standard Library Headers
 
@@ -30,9 +30,9 @@
 // 5. Shared Headers
 #include <xmscore/math/math.h>
 #include <xmscore/stl/utility.h>
-#include <xmsinterp/geometry/GmBoostTypes.h>
-#include <xmsinterp/geometry/geoms.h>
-#include <xmsinterp/geometry/GmPtSearch.h>
+#include <xmsgeom/geometry/GmBoostTypes.h>
+#include <xmsgeom/geometry/geoms.h>
+#include <xmsgeom/geometry/GmPtSearch.h>
 #include <xmscore/misc/xmstype.h>
 #include <xmscore/misc/XmError.h>
 #include <xmscore/misc/XmConst.h>
@@ -631,12 +631,12 @@ BSHP<GmPtSearch> GmTriSearchImpl::CreatePtSearch()
 #ifdef CXX_TEST
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <xmsinterp/geometry/GmTriSearch.t.h>
+#include <xmsgeom/geometry/GmTriSearch.t.h>
 
 #include <xmscore/testing/TestTools.h>
 
-#include <xmsinterp/triangulate/TrTin.h>
-#include <xmsinterp/triangulate/TrTin.t.h>
+#include <xmsgeom/triangulate/TrTin.h>
+#include <xmsgeom/triangulate/TrTin.t.h>
 
 using namespace xms;
 

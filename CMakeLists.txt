@@ -56,6 +56,14 @@ set(xmsgeom_sources
   xmsgeom/geometry/GmPolyLinePtRedistributer.cpp
   xmsgeom/geometry/GmPtSearch.cpp
   xmsgeom/geometry/GmTriSearch.cpp
+  xmsgeom/triangulate/TrBreaklineAdder.cpp
+  xmsgeom/triangulate/triangles.cpp
+  xmsgeom/triangulate/TrTin.cpp
+  xmsgeom/triangulate/TrTriangulator.cpp
+  xmsgeom/triangulate/TrTriangulatorPoints.cpp
+  xmsgeom/triangulate/detail/TrAutoFixFourTrianglePts.cpp
+  xmsgeom/triangulate/detail/triangulate.cpp
+  xmsgeom/triangulate/detail/TrOuterTriangleDeleter.cpp
 )
 
 set(xmsgeom_headers
@@ -70,6 +78,14 @@ set(xmsgeom_headers
   xmsgeom/geometry/GmPolyLinePtRedistributer.h
   xmsgeom/geometry/GmPtSearch.h
   xmsgeom/geometry/GmTriSearch.h
+  xmsgeom/triangulate/TrBreaklineAdder.h
+  xmsgeom/triangulate/triangles.h
+  xmsgeom/triangulate/TrTin.h
+  xmsgeom/triangulate/TrTriangulator.h
+  xmsgeom/triangulate/TrTriangulatorPoints.h
+  xmsgeom/triangulate/detail/TrAutoFixFourTrianglePts.h
+  xmsgeom/triangulate/detail/triangulate.h
+  xmsgeom/triangulate/detail/TrOuterTriangleDeleter.h
 )
 
 # Pybind11 sources
@@ -94,6 +110,12 @@ if (BUILD_TESTING)
     xmsgeom/geometry/GmPolyLinePtRedistributer.t.h
     xmsgeom/geometry/GmPtSearch.t.h
     xmsgeom/geometry/GmTriSearch.t.h
+    xmsgeom/triangulate/TrBreaklineAdder.h
+    xmsgeom/triangulate/TrBreaklineAdder.t.h
+    xmsgeom/triangulate/TrTin.t.h
+    xmsgeom/triangulate/TrTriangulatorPoints.t.h
+    xmsgeom/triangulate/detail/TrAutoFixFourTrianglePts.t.h
+    xmsgeom/triangulate/detail/TrOuterTriangleDeleter.t.h
   )
 
   find_package(CxxTest)

@@ -11,7 +11,7 @@
 // 1. Precompiled header
 
 // 2. My header
-#include <xmsinterp/geometry/GmPtSearch.h>
+#include <xmsgeom/geometry/GmPtSearch.h>
 
 // 3. Standard Library Headers
 
@@ -642,7 +642,7 @@ void GmPtSearchImpl::CreateOctants(const Pt3d& a_pt, std::vector<box>& a_boxes) 
 #ifdef CXX_TEST
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <xmsinterp/geometry/GmPtSearch.t.h>
+#include <xmsgeom/geometry/GmPtSearch.t.h>
 #include <boost/assign.hpp>
 #include <xmscore/testing/TestTools.h>
 

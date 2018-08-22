@@ -11,7 +11,7 @@
 // 1. Precompiled header
 
 // 2. My header
-#include <xmsinterp/geometry/GmExtents.h>
+#include <xmsgeom/geometry/GmExtents.h>
 
 // 3. Standard Library Headers
 
@@ -539,7 +539,7 @@ double GmExtents3d::m_tolerance(1.0e-6); ///< Tolerance. Static ?
 ////////////////////////////////////////////////////////////////////////////////
 #ifdef CXX_TEST
 
-#include <xmsinterp/geometry/GmExtents.t.h>
+#include <xmsgeom/geometry/GmExtents.t.h>
 
 //----- Namespace declaration --------------------------------------------------
 

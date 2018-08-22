@@ -11,7 +11,7 @@
 // 1. Precompiled header
 
 // 2. My own header
-#include <xmsinterp/geometry/GmPolyLinePtRedistributer.h>
+#include <xmsgeom/geometry/GmPolyLinePtRedistributer.h>
 
 // 3. Standard library headers
 #include <map>
@@ -175,10 +175,10 @@ VecPt3d GmPolyLinePtRedistributerImpl::RedistPolyLineWithNumSeg(const VecPt3d& a
 #ifdef CXX_TEST
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <xmsinterp/geometry/GmPolyLinePtRedistributer.t.h>
+#include <xmsgeom/geometry/GmPolyLinePtRedistributer.t.h>
 
 #include <xmscore/testing/TestTools.h>
-#include <xmsinterp/geometry/geoms.h>
+#include <xmsgeom/geometry/geoms.h>
 
 //------------------------------------------------------------------------------
 /// \brief tests creating the class

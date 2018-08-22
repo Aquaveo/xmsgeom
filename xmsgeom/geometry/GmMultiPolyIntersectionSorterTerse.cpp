@@ -11,7 +11,7 @@
 // 1. Precompiled header
 
 // 2. My header
-#include <xmsinterp/geometry/GmMultiPolyIntersectionSorterTerse.h>
+#include <xmsgeom/geometry/GmMultiPolyIntersectionSorterTerse.h>
 
 // 3. Standard Library Headers
 #include <cfloat>
@@ -22,8 +22,8 @@
 #include <xmscore/misc/xmstype.h>                          // XM_NONE
 #include <xmscore/stl/set.h>                               // Set*
 #include <xmscore/stl/vector.h>                            // Vec*
-#include <xmsinterp/geometry/GmMultiPolyIntersectorData.h> // GmMultiPolyIntersectorData
-#include <xmsinterp/geometry/geoms.h> // gmComputeCentroid, gmTurn
+#include <xmsgeom/geometry/GmMultiPolyIntersectorData.h> // GmMultiPolyIntersectorData
+#include <xmsgeom/geometry/geoms.h> // gmComputeCentroid, gmTurn
 
 // 5. Shared Headers
 
