@@ -1,0 +1,21 @@
+# Set the default line ending behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Files to always be converted to native line endings on
+*.c   text
+*.cpp text
+*.cxx text
+*.h   text
+*.hpp text
+*.hxx text
+*.py
+
+# Files that will always have CRLF line endings
+*.bat text eol=crlf
+
+# Files that will always have LF line endings
+*.sh text eol=lf
+
+# Unmodified files
+*.png binary
+*.jpg binary
