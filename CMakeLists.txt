@@ -10,11 +10,14 @@ else()
 endif()
 
 set(BUILD_TESTING NO CACHE BOOL "Enable/Disable testing")
+set(IS_PYTHON_BUILD NO CACHE BOOL "Enable/Disable PYTHON")
 set(IS_CONDA_BUILD NO CACHE BOOL "Set this if you want to make a conda package.")
 set(PYTHON_TARGET_VERSION 3.6 CACHE STRING "Version of python to link to for python wrapping.")
-set(CONDA_PREFIX "" CACHE PATH "Path to the conda environment used to build.")
-set(IS_PYTHON_BUILD NO CACHE BOOL "Set this if you want to build the python bindings.")
-set(XMSGEOM_TEST_PATH "../../test_files/" CACHE PATH "Path to test files for testing")
+
+if(IS_PYTHON_BUILD AND BUILD_TESTING)
+  message(FATAL_ERROR "Cannot build python module when testing is enabled")
+endif()
+
 
 project(xmsgeom C CXX)
 
@@ -27,9 +30,12 @@ if(WIN32)
     endif()
 endif()
 
-if(IS_CONDA_BUILD)
+IF(IS_CONDA_BUILD)
   include(${CMAKE_CURRENT_LIST_DIR}/condabuildinfo.cmake)
-else() # If we are not using conda, we are using conan
+
+ELSE() # If we are not using conda, we are using conan
+  # C++11 Support
+
   # Conan setup
   include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
   conan_basic_setup(TARGETS)
@@ -42,11 +48,37 @@ message("External Include Dirs: ${EXT_INCLUDE_DIRS}")
 message("External Lib Dirs: ${EXT_LIB_DIRS}")
 message("Extneral Libs: ${EXT_LIBS}")
 
+if(IS_PYTHON_BUILD)
+  # linux and mac builds for conan (on TRAVISCI) use a docker that has python
+  # 2.7 as system python. We do not have control over that docker image so we
+  # can't change this and it is fine for building conan packages and checking
+  # that we don't have errors in the python wrapping. We have conda recipes
+  # for building python packages that target other versions of python.
+  find_package(PythonLibs ${PYTHON_TARGET_VERSION} EXACT REQUIRED)
+  list(APPEND EXT_INCLUDE_DIRS
+    ${PYTHON_INCLUDE_DIRS}
+  )
+  # Pybind11 module
+  if(IS_CONDA_BUILD)
+      include("${CONDA_PREFIX}/share/cmake/pybind11/pybind11Targets.cmake")
+      include("${CONDA_PREFIX}/share/cmake/pybind11/FindPythonLibsNew.cmake")
+      include("${CONDA_PREFIX}/share/cmake/pybind11/pybind11Config.cmake")
+      include("${CONDA_PREFIX}/share/cmake/pybind11/pybind11ConfigVersion.cmake")
+      include("${CONDA_PREFIX}/share/cmake/pybind11/pybind11Tools.cmake")
+  else()
+      include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11Targets.cmake")
+      include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/FindPythonLibsNew.cmake")
+      include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11Config.cmake")
+      include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11ConfigVersion.cmake")
+      include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11Tools.cmake")
+  endif()
+endif()
+
 include_directories(${CMAKE_CURRENT_LIST_DIR})
 include_directories(${EXT_INCLUDE_DIRS})
 link_directories(${EXT_LIB_DIRS})
 
-# Static library sources
+# Sources
 set(xmsgeom_sources
   xmsgeom/geometry/geoms.cpp
   xmsgeom/geometry/GmExtents.cpp
@@ -88,18 +120,8 @@ set(xmsgeom_headers
   xmsgeom/triangulate/detail/TrOuterTriangleDeleter.h
 )
 
-# Pybind11 sources
-set(xmsgeom_py
-  
-)
-
-set(xmsgeom_py_headers
-  
-)
-
 # Tests
 if (BUILD_TESTING)
-  add_definitions(-DXMSGEOM_TEST_PATH="${XMSGEOM_TEST_PATH}/")
   add_definitions(-DCXX_TEST -DCXXTEST4)
 
   list(APPEND xmsgeom_sources
@@ -120,28 +142,28 @@ if (BUILD_TESTING)
 
   find_package(CxxTest)
   if(CXXTEST_FOUND)
-    include_directories(${CXXTEST_INCLUDE_DIR})
+    include_directories(${CXXTEST_INCLUDE_DIRS})
     enable_testing()
 
-    set(CXXTEST_TESTGEN_ARGS --xunit-printer --have-eh)
+    set(CXXTEST_TESTGEN_ARGS --xunit-printer)
     file(GLOB_RECURSE test_headers ${CMAKE_CURRENT_LIST_DIR}/xmsgeom/*.t.h)
     CXXTEST_ADD_TEST(
       runner runner.cpp ${test_headers}
     )
     target_link_libraries(runner ${PROJECT_NAME})
+
+    if(WIN32)
+      set(RUNNERNAME "runner.exe")
+    else()
+      set(RUNNERNAME "runner")
+    endif()
   endif()
-endif ()
+endif()
 
 # Static library
 add_library(${PROJECT_NAME} STATIC
   ${xmsgeom_sources} ${xmsgeom_headers}
 )
-target_include_directories(${PROJECT_NAME}
-  PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}>
-    $<INSTALL_INTERFACE:include/>
-    ${Boost_INCLUDE_DIR}
- )
 find_package(Threads REQUIRED)
 target_link_libraries(${PROJECT_NAME}
   ${EXT_LIBS}
@@ -154,66 +176,53 @@ if(UNIX AND NOT APPLE)
 endif()
 
 if(IS_PYTHON_BUILD)
-      # linux and mac builds for conan (on TRAVISCI) use a docker that has python
-    # 2.7 as system python. We do not have control over that docker image so we
-    # can't change this and it is fine for building conan packages and checking
-    # that we don't have errors in the python wrapping. We have conda recipes
-    # for building python packages that target other versions of python.
-    find_package(PythonLibs ${PYTHON_TARGET_VERSION} EXACT REQUIRED)
-    
-    message("PYTHON_INCLUDE: ${PYTHON_INCLUDE_DIRS}")
-    message("PYTHON_LIBS: ${PYTHON_LIBRARIES}")
 
-    # Pybind11 module
-    if(IS_CONDA_BUILD)
-        include("${CONDA_PREFIX}/share/cmake/pybind11/pybind11Targets.cmake")
-        include("${CONDA_PREFIX}/share/cmake/pybind11/FindPythonLibsNew.cmake")
-        include("${CONDA_PREFIX}/share/cmake/pybind11/pybind11Config.cmake")
-        include("${CONDA_PREFIX}/share/cmake/pybind11/pybind11ConfigVersion.cmake")
-        include("${CONDA_PREFIX}/share/cmake/pybind11/pybind11Tools.cmake")
+  # Pybind11 sources
+  set(xmsgeom_py
+    xmsgeom/python/triangulate/triangulate_py.cpp
+    xmsgeom/python/triangulate/TrTin_py.cpp
+    xmsgeom/python/triangulate/TrTriangulatorPoints_py.cpp
+    xmsgeom/python/xmsgeom_py.cpp
+  )
 
-    else()
-        include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11Targets.cmake")
-        include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/FindPythonLibsNew.cmake")
-        include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11Config.cmake")
-        include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11ConfigVersion.cmake")
-        include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11Tools.cmake")
-    endif()
+  set(xmsgeom_py_headers
+    xmsgeom/python/triangulate/triangulate_py.h
+  )
 
-    pybind11_add_module(xmsgeom_py
-      ${xmsgeom_py} ${xmsgeom_py_headers}
-    )
-    target_include_directories(xmsgeom_py
-        PRIVATE
-          ${EXT_LIBS}
-          PYTHON_INCLUDE_DIRS
-    )
-    target_link_libraries(xmsgeom_py
+  message(STATUS "PYTHON_INCLUDE: ${PYTHON_INCLUDE_DIRS}")
+  message(STATUS "PYTHON_LIBS: ${PYTHON_LIBRARIES}")
+
+  pybind11_add_module(xmsgeom_py
+    ${xmsgeom_py} ${xmsgeom_py_headers}
+  )
+  target_include_directories(xmsgeom_py
       PRIVATE
-        ${EXT_LIBS}
-        ${PROJECT_NAME}
-    )
-    set_target_properties(xmsgeom_py PROPERTIES
-      LINKER_LANGUAGE CXX
-    )
+        ${EXT_INCLUDE_DIRS}
+  )
+  target_link_libraries(xmsgeom_py
+    PRIVATE
+      ${EXT_LIBS}
+      ${PROJECT_NAME}
+  )
+  set_target_properties(xmsgeom_py PROPERTIES
+    LINKER_LANGUAGE CXX
+  )
 
-    execute_process(COMMAND python -c "import os; print('${PYTHON_SITE_PACKAGES}'.replace('${CONDA_PREFIX}' + os.sep, ''))" OUTPUT_VARIABLE PYTHON_SITE_PACKAGES_TRIMMED OUTPUT_STRIP_TRAILING_WHITESPACE)
+  execute_process(COMMAND python -c "import os; print('${PYTHON_SITE_PACKAGES}'.replace('${CONDA_PREFIX}' + os.sep, ''))" OUTPUT_VARIABLE PYTHON_SITE_PACKAGES_TRIMMED OUTPUT_STRIP_TRAILING_WHITESPACE)
 
-    # Install recipe
-    install(
-      TARGETS xmsgeom_py
-      ARCHIVE DESTINATION ${PYTHON_SITE_PACKAGES_TRIMMED}
-      LIBRARY DESTINATION ${PYTHON_SITE_PACKAGES_TRIMMED}
-    )
-
+  # Install recipe
+  install(
+    TARGETS xmsgeom_py
+    ARCHIVE DESTINATION ${PYTHON_SITE_PACKAGES_TRIMMED}
+    LIBRARY DESTINATION ${PYTHON_SITE_PACKAGES_TRIMMED}
+  )
 endif()
-
 
 # Install recipe
 install(
   TARGETS ${PROJECT_NAME}
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION "lib"
+  LIBRARY DESTINATION "lib"
 )
 foreach (header IN LISTS xmsgeom_headers xmsgeom_py_headers)
   get_filename_component(subdir "${header}" DIRECTORY)
