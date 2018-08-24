@@ -67,13 +67,13 @@ public:
 
   virtual void SetQuery(GmMultiPolyIntersectorQueryEnum a_query) override;
   virtual void TraverseLineSegment(double x1, double y1, double x2, double y2,
-                                   VecInt &polyids, VecDbl &tvalues);
+                                   VecInt &polyids, VecDbl &tvalues) override;
   virtual void TraverseLineSegment(double x1, double y1, double x2, double y2,
-                                   VecInt &polyids);
+                                   VecInt &polyids) override;
   virtual void TraverseLineSegment(double a_x1, double a_y1, double a_x2,
                                    double a_y2, VecInt &a_polyids,
-                                   std::vector<Pt3d> &a_pts);
-  virtual int PolygonFromPoint(const Pt3d &a_pt);
+                                   std::vector<Pt3d> &a_pts) override;
+  virtual int PolygonFromPoint(const Pt3d &a_pt) override;
 
 private:
   void CalculateBuffer();
