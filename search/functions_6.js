@@ -1,12 +1,16 @@
 var searchData=
 [
   ['getactivity',['GetActivity',['../classxms_1_1_gm_pt_search_impl.html#a6e2738c96014e542d8ba2977ce996eac',1,'xms::GmPtSearchImpl']]],
+  ['getandclearstack',['GetAndClearStack',['https://aquaveo.github.io/xmscore/classxms_1_1_xm_log.html#a931d33575128f427516bd258dd9642bd',1,'xms::XmLog']]],
+  ['getandclearstackstr',['GetAndClearStackStr',['https://aquaveo.github.io/xmscore/classxms_1_1_xm_log.html#a6a0e58e950e973b880fdfd566062a38b',1,'xms::XmLog']]],
   ['getboostpoly',['GetBoostPoly',['../classxms_1_1_gm_multi_poly_intersector_impl.html#a9205979073697853ffdc62c0e5a87cac',1,'xms::GmMultiPolyIntersectorImpl']]],
   ['getboundarypoints',['GetBoundaryPoints',['../classxms_1_1_tr_tin_impl.html#a03191327872b758392b0dd2c4fa1f60c',1,'xms::TrTinImpl']]],
   ['getboundarypolys',['GetBoundaryPolys',['../classxms_1_1_tr_tin_impl.html#a8b2ebdfcba14a1d76554c9cd077a7026',1,'xms::TrTinImpl']]],
+  ['getdefault',['GetDefault',['https://aquaveo.github.io/xmscore/classxms_1_1_e_test_messaging_state.html#a576bc48a3eccc9f7fd55fcafdd8bd8f8',1,'xms::ETestMessagingState']]],
   ['getextents',['GetExtents',['../classxms_1_1_gm_extents2d.html#a12db96218f2b4f7c1ff5242ba8bab3d7',1,'xms::GmExtents2d::GetExtents(double *a_MinX, double *a_MaxX, double *a_MinY, double *a_MaxY)'],['../classxms_1_1_gm_extents2d.html#abdadfa5471353d9186adf9118790a95a',1,'xms::GmExtents2d::GetExtents(Pt3d &amp;a_dMin, Pt3d &amp;a_dMax)'],['../classxms_1_1_gm_extents3d.html#a09f40fd9285ad63b3f85a5490406bbd6',1,'xms::GmExtents3d::GetExtents(double *a_MinX, double *a_MaxX, double *a_MinY, double *a_MaxY, double *a_MinZ, double *a_MaxZ) const '],['../classxms_1_1_gm_extents3d.html#af209302d40f52780b6db1d8ca1e42343',1,'xms::GmExtents3d::GetExtents(Pt3d &amp;a_dMin, Pt3d &amp;a_dMax) const '],['../classxms_1_1_tr_breakline_adder_impl.html#a330e8badc1b3f6f14c95c07d66ba709c',1,'xms::TrBreaklineAdderImpl::GetExtents()'],['../classxms_1_1_tr_tin_impl.html#a7ec5b4c0b8cf8d22eb0251a66f8c3eac',1,'xms::TrTinImpl::GetExtents()']]],
   ['getid',['GetID',['../classxms_1_1_tr_triangulator_points.html#a5a2ab0245a79750a3212e2400edca40a',1,'xms::TrTriangulatorPoints']]],
   ['getintersectingedges',['GetIntersectingEdges',['../classxms_1_1_tr_breakline_adder_impl.html#acb8d69c9277b12db44ff851377264652',1,'xms::TrBreaklineAdderImpl']]],
+  ['getlistener',['GetListener',['https://aquaveo.github.io/xmscore/classxms_1_1_progress_listener.html#a2b352b29be51b8fedcb13c95fdb7dce8',1,'MockProgressListener']]],
   ['getlocation',['GetLocation',['../classxms_1_1_tr_triangulator_points.html#adde88d87e5db9f9be2c13e9075da6eca',1,'xms::TrTriangulatorPoints']]],
   ['getmax',['GetMax',['../classxms_1_1_gm_extents2d.html#aea8b9589dfc4cd2c580ae20b0101f55f',1,'xms::GmExtents2d::GetMax()'],['../classxms_1_1_gm_extents3d.html#aa9a6219254b142e60275358ae2ce4c41',1,'xms::GmExtents3d::GetMax()']]],
   ['getmaxx',['GetMaxX',['../classxms_1_1_gm_extents2d.html#aa57f052ef12bb6c78f2031c350642755',1,'xms::GmExtents2d::GetMaxX()'],['../classxms_1_1_gm_extents3d.html#a0acb03a400331cce3c33444b857c52dc',1,'xms::GmExtents3d::GetMaxX()']]],
@@ -23,6 +27,7 @@ var searchData=
   ['getptactivity',['GetPtActivity',['../classxms_1_1_gm_tri_search_impl.html#a88b9fbb5c768f1a76a0c69dc7be10935',1,'xms::GmTriSearchImpl']]],
   ['getptsandtristodelete',['GetPtsAndTrisToDelete',['../classxms_1_1_tr_auto_fix_four_triangle_pts_impl.html#a295a366f04639d09928b3d8295fd8e2c',1,'xms::TrAutoFixFourTrianglePtsImpl']]],
   ['getresults',['GetResults',['../class_gm_point_in_poly_unit_tests.html#a6faf1c86377a32334873eb63bcb6cfad',1,'GmPointInPolyUnitTests']]],
+  ['getskipping',['GetSkipping',['https://aquaveo.github.io/xmscore/classxms_1_1_e_test_messaging_state.html#a5e54c4195f23b5d7ac9eb51c76ffa79a',1,'xms::ETestMessagingState']]],
   ['gettolerance',['GetTolerance',['../classxms_1_1_gm_extents2d.html#a7db9964a1b49f1bd8e3003a5c592dbc0',1,'xms::GmExtents2d::GetTolerance()'],['../classxms_1_1_gm_extents3d.html#accc7b2a33b04d17b07af0db56df8b328',1,'xms::GmExtents3d::GetTolerance()']]],
   ['gettribarycentricvals',['GetTriBarycentricVals',['../classxms_1_1_gm_tri_search_impl.html#a21de9e3170fcd10467c14aeea25d74be',1,'xms::GmTriSearchImpl']]],
   ['globalindex',['GlobalIndex',['../classxms_1_1_tr_tin_impl.html#af2da41ae14938890b4fa3b6f1a96ca89',1,'xms::TrTinImpl']]],
@@ -37,5 +42,9 @@ var searchData=
   ['gmptsearchimpl',['GmPtSearchImpl',['../classxms_1_1_gm_pt_search_impl.html#ac5241a77c7018ec67738437fc0117549',1,'xms::GmPtSearchImpl']]],
   ['gmtrisearch',['GmTriSearch',['../classxms_1_1_gm_tri_search.html#ae944fa5ccf34141894a79b803b78fadc',1,'xms::GmTriSearch']]],
   ['gmtrisearchimpl',['GmTriSearchImpl',['../classxms_1_1_gm_tri_search_impl.html#a9b2ed0cf16ebef3d93ad379d21438d35',1,'xms::GmTriSearchImpl']]],
-  ['group',['group',['../class_geoms_xmsng_intermediate_tests.html#aef5edd3a634e8426082d33177059befb',1,'GeomsXmsngIntermediateTests::group()'],['../class_gm_multi_poly_intersector2_intermediate_tests.html#aa6a644162f42d054f0299aadba21e922',1,'GmMultiPolyIntersector2IntermediateTests::group()'],['../class_gm_polygon_intermediate_tests.html#af4eb4d2ec4454de006730ce7b33c5c6b',1,'GmPolygonIntermediateTests::group()']]]
+  ['group',['group',['https://aquaveo.github.io/xmscore/class_observer_intermediate_tests.html#aefbc6e786385d522f04d2e2f0f12d36e',1,'ObserverIntermediateTests::group()'],['../class_geoms_xmsng_intermediate_tests.html#aef5edd3a634e8426082d33177059befb',1,'GeomsXmsngIntermediateTests::group()'],['../class_gm_multi_poly_intersector2_intermediate_tests.html#aa6a644162f42d054f0299aadba21e922',1,'GmMultiPolyIntersector2IntermediateTests::group()'],['../class_gm_polygon_intermediate_tests.html#af4eb4d2ec4454de006730ce7b33c5c6b',1,'GmPolygonIntermediateTests::group()']]],
+  ['gt_5feps',['GT_EPS',['https://aquaveo.github.io/xmscore/namespacexms.html#a661b4e1380df8833eb664d864a0868e0',1,'xms']]],
+  ['gt_5ftol',['GT_TOL',['https://aquaveo.github.io/xmscore/namespacexms.html#ab8190cb81d709d785efaa01409c342c2',1,'xms']]],
+  ['gteq_5feps',['GTEQ_EPS',['https://aquaveo.github.io/xmscore/namespacexms.html#a4c0dd874e2af06c9ea53bee53a0f8809',1,'xms']]],
+  ['gteq_5ftol',['GTEQ_TOL',['https://aquaveo.github.io/xmscore/namespacexms.html#ae0787a6aa8fbfb21f298cea14409af25',1,'xms']]]
 ];

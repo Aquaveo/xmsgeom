@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('_gm_multi_poly_intersector_8cpp.html',
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,6 +105,7 @@ $(document).ready(function(){initNavTree('_gm_multi_poly_intersector_8cpp.html',
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">GmMultiPolyIntersector.cpp File Reference</div>  </div>
@@ -115,20 +117,20 @@ $(document).ready(function(){initNavTree('_gm_multi_poly_intersector_8cpp.html',
 <code>#include &lt;boost/geometry/geometries/point_xy.hpp&gt;</code><br/>
 <code>#include &lt;boost/geometry/geometries/polygon.hpp&gt;</code><br/>
 <code>#include &lt;boost/geometry/index/rtree.hpp&gt;</code><br/>
-<code>#include &lt;xmscore/misc/XmConst.h&gt;</code><br/>
-<code>#include &lt;xmscore/misc/XmError.h&gt;</code><br/>
-<code>#include &lt;xmscore/misc/XmLog.h&gt;</code><br/>
-<code>#include &lt;xmscore/misc/boost_defines.h&gt;</code><br/>
-<code>#include &lt;xmscore/misc/xmstype.h&gt;</code><br/>
-<code>#include &lt;xmscore/points/pt.h&gt;</code><br/>
-<code>#include &lt;xmscore/stl/set.h&gt;</code><br/>
-<code>#include &lt;xmscore/stl/vector.h&gt;</code><br/>
+<code>#include &lt;<a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/_xm_const_8h.html">xmscore/misc/XmConst.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/_xm_error_8h.html">xmscore/misc/XmError.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/_xm_log_8h.html">xmscore/misc/XmLog.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/boost__defines_8h.html">xmscore/misc/boost_defines.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/xmstype_8h.html">xmscore/misc/xmstype.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/pt_8h.html">xmscore/points/pt.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/set_8h.html">xmscore/stl/set.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/vector_8h.html">xmscore/stl/vector.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_gm_boost_types_8h_source.html">xmsgeom/geometry/GmBoostTypes.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_gm_multi_poly_intersection_sorter_8h_source.html">xmsgeom/geometry/GmMultiPolyIntersectionSorter.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_gm_multi_poly_intersector_data_8h_source.html">xmsgeom/geometry/GmMultiPolyIntersectorData.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="geoms_8h_source.html">xmsgeom/geometry/geoms.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_gm_multi_poly_intersector_8t_8h_source.html">xmsgeom/geometry/GmMultiPolyIntersector.t.h</a>&gt;</code><br/>
-<code>#include &lt;xmscore/testing/TestTools.h&gt;</code><br/>
+<code>#include &lt;<a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/_test_tools_8h.html">xmscore/testing/TestTools.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_gm_multi_poly_intersection_sorter_terse_8h_source.html">xmsgeom/geometry/GmMultiPolyIntersectionSorterTerse.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="triangles_8h_source.html">xmsgeom/triangulate/triangles.h</a>&gt;</code><br/>
 </div>
@@ -138,6 +140,11 @@ $(document).ready(function(){initNavTree('_gm_multi_poly_intersector_8cpp.html',
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxms_1_1_gm_multi_poly_intersector_impl.html">xms::GmMultiPolyIntersectorImpl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to intersect a line segment with any number of polygons in 2D. Returns the intersected polygons in order along with t values. May be an alternative to SurfaceIter and feiTraverseLineSegment2.  <a href="classxms_1_1_gm_multi_poly_intersector_impl.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacexms"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/namespacexms.html">xms</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -163,7 +170,7 @@ bgi::quadratic&lt; 8 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_c3672263df3bee09ab41b02eff2fb1fc.html">xmsgeom</a></li><li class="navelem"><a class="el" href="dir_52cc3d85d55afbc868a41fa039c984cc.html">geometry</a></li><li class="navelem"><a class="el" href="_gm_multi_poly_intersector_8cpp.html">GmMultiPolyIntersector.cpp</a></li>
-    <li class="footer">Generated on Fri Aug 24 2018 19:35:57 for xmsgeom by
+    <li class="footer">Generated on Fri Aug 24 2018 20:11:06 for xmsgeom by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -93,7 +94,7 @@ $(document).ready(function(){initNavTree('classxms_1_1idx__tri.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -123,7 +124,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a18b7dba501483fa3ebb141f439497dfc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxms_1_1idx__tri.html#a18b7dba501483fa3ebb141f439497dfc">idx_tri</a> (const Pt3d *a_pts, const int *a_tris, double a_tol)</td></tr>
+<tr class="memitem:a18b7dba501483fa3ebb141f439497dfc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxms_1_1idx__tri.html#a18b7dba501483fa3ebb141f439497dfc">idx_tri</a> (const <a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/namespacexms.html#a33ae0c78e599c46ba59bce7f2b32d7ab">Pt3d</a> *a_pts, const int *a_tris, double a_tol)</td></tr>
 <tr class="separator:a18b7dba501483fa3ebb141f439497dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05e3ea7e98be2c3df3fb3977d30d83d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxms_1_1idx__tri.html#a88c4b0524e400a243b939e69b13fa9fa">result_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxms_1_1idx__tri.html#a05e3ea7e98be2c3df3fb3977d30d83d6">operator()</a> (size_t i) const </td></tr>
 <tr class="memdesc:a05e3ea7e98be2c3df3fb3977d30d83d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates triangle extents based on a triangle index  <a href="#a05e3ea7e98be2c3df3fb3977d30d83d6">More...</a><br/></td></tr>
@@ -132,7 +133,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a13730645297b2eb5f6ef6e657d878dc4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13730645297b2eb5f6ef6e657d878dc4"></a>
-const Pt3d *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxms_1_1idx__tri.html#a13730645297b2eb5f6ef6e657d878dc4">m_pts</a></td></tr>
+const <a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/namespacexms.html#a33ae0c78e599c46ba59bce7f2b32d7ab">Pt3d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxms_1_1idx__tri.html#a13730645297b2eb5f6ef6e657d878dc4">m_pts</a></td></tr>
 <tr class="memdesc:a13730645297b2eb5f6ef6e657d878dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">point locations <br/></td></tr>
 <tr class="separator:a13730645297b2eb5f6ef6e657d878dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f6cabf2a7d2ac6ae5fe7c349262fcf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f6cabf2a7d2ac6ae5fe7c349262fcf9"></a>
@@ -175,7 +176,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
         <tr>
           <td class="memname">xms::idx_tri::idx_tri </td>
           <td>(</td>
-          <td class="paramtype">const Pt3d *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/namespacexms.html#a33ae0c78e599c46ba59bce7f2b32d7ab">Pt3d</a> *&#160;</td>
           <td class="paramname"><em>a_pts</em>, </td>
         </tr>
         <tr>
@@ -250,7 +251,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 
 <p>Definition at line <a class="el" href="_gm_tri_search_8cpp_source.html#l00081">81</a> of file <a class="el" href="_gm_tri_search_8cpp_source.html">GmTriSearch.cpp</a>.</p>
 
-<p>References <a class="el" href="_gm_tri_search_8cpp_source.html#l00110">m_pts</a>, <a class="el" href="_gm_tri_search_8cpp_source.html#l00112">m_tol</a>, and <a class="el" href="_gm_tri_search_8cpp_source.html#l00111">m_tris</a>.</p>
+<p>References <a class="el" href="_gm_tri_search_8cpp_source.html#l00110">m_pts</a>, <a class="el" href="_gm_tri_search_8cpp_source.html#l00112">m_tol</a>, <a class="el" href="_gm_tri_search_8cpp_source.html#l00111">m_tris</a>, <a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/classxms_1_1_pt3.html#a3870f08593cabc47fd5d213ea1c0898a">xms::Pt3&lt; T &gt;::x</a>, and <a class="elRef" doxygen="/home/travis/build/Aquaveo/xmsgeom/Doxygen/xmscore.tag:https://aquaveo.github.io/xmscore//" href="https://aquaveo.github.io/xmscore/classxms_1_1_pt3.html#a218217ff3405493c7b6dce94935f1290">xms::Pt3&lt; T &gt;::y</a>.</p>
 
 </div>
 </div>
@@ -262,8 +263,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>xms</b></li><li class="navelem"><a class="el" href="classxms_1_1idx__tri.html">idx_tri</a></li>
-    <li class="footer">Generated on Fri Aug 24 2018 19:35:57 for xmsgeom by
+    <li class="navelem"><a class="el" href="namespacexms.html">xms</a></li><li class="navelem"><a class="el" href="classxms_1_1idx__tri.html">idx_tri</a></li>
+    <li class="footer">Generated on Fri Aug 24 2018 20:11:06 for xmsgeom by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

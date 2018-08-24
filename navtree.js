@@ -12,6 +12,7 @@ var NAVTREE =
       ] ],
       [ "\"xmsgeom\" Name ", "index.html#xmsgeomName", null ]
     ] ],
+    [ "index", "https://aquaveo.github.io/xmscore/index.html", null ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
@@ -37,9 +38,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"class_tr_outer_triangle_deleter_unit_tests.html",
-"classxms_1_1_gm_tri_search_impl.html#ab3a89a592db07b714e4a5eb8d12037c6",
-"geoms_8cpp.html#a296ceeadef9d9d4e4ba698f52c44c6c9"
+"class_tr_breakline_adder_unit_tests.html#af46bc719d5a27acd4a02f4f6ba2ea27d",
+"classxms_1_1_gm_tri_search_impl.html#ab12d667cf4931879e49158ca27a7d0da",
+"geoms_8cpp.html#a241b33f3ef73ed56ca73fdbb830e14a3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['xm_5fdisallow_5fcopy_5fand_5fassign',['XM_DISALLOW_COPY_AND_ASSIGN',['../class_gm_point_in_poly_tester__gm_point_in_polygon2_d.html#a93106a8027d1f7a54029804e94a478c3',1,'GmPointInPolyTester_gmPointInPolygon2D::XM_DISALLOW_COPY_AND_ASSIGN()'],['../class_gm_point_in_poly_unit_tests.html#ad7cbb8b88a9b3d04a585dac034e7d5e3',1,'GmPointInPolyUnitTests::XM_DISALLOW_COPY_AND_ASSIGN()'],['../class_gm_point_in_poly_tester___gm_polygon.html#a55c128adfb44a4c87abd9f00a9ebd806',1,'GmPointInPolyTester_GmPolygon::XM_DISALLOW_COPY_AND_ASSIGN()']]],
-  ['xmsgeom_5fpy_2ecpp',['xmsgeom_py.cpp',['../xmsgeom__py_8cpp.html',1,'']]]
+  ['w',['w',['https://aquaveo.github.io/xmscore/classxms_1_1_pt4.html#a871dee21ccefe470143d40290306b2c8',1,'xms::Pt4']]],
+  ['waitfornexttenthsecond',['WaitForNextTenthSecond',['https://aquaveo.github.io/xmscore/class_mock_mesher.html#aa79c8ee5f4c3546c0c8fadd89ab85044',1,'MockMesher']]],
+  ['warning',['warning',['https://aquaveo.github.io/xmscore/namespacexmlog.html#a7f66c92bb821241cbb29fb07d7bce588a6298031baaba1124b5b331212084dcb3',1,'xmlog']]],
+  ['within',['Within',['../classxms_1_1_gm_polygon_impl.html#ab4fb31f5ae09331f8abb148e9374a0fa',1,'xms::GmPolygonImpl']]]
 ];

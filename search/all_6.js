@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['fg_5flogfilenamecallback',['fg_logFilenameCallback',['https://aquaveo.github.io/xmscore/namespacexms.html#aff8502089eb5f522e683cb52ea0a93ae',1,'xms']]],
   ['filladjtrisifneeded',['FillAdjTrisIfNeeded',['../classxms_1_1_tr_auto_fix_four_triangle_pts_impl.html#a7bafc03b8a5a97ba3f8fea1ce5238aa8',1,'xms::TrAutoFixFourTrianglePtsImpl']]],
   ['finalizetriangulation',['FinalizeTriangulation',['../classxms_1_1_tr_triangulator_points.html#a91c8c4eb53d2b252c816b168d0b5f7e5',1,'xms::TrTriangulatorPoints']]],
   ['findintersectingedgefromedge',['FindIntersectingEdgeFromEdge',['../classxms_1_1_tr_breakline_adder_impl.html#a25e0d6e4454a500d1720681e023aecb3',1,'xms::TrBreaklineAdderImpl']]],
@@ -12,5 +13,9 @@ var searchData=
   ['flagtrianglesalongpolygon',['FlagTrianglesAlongPolygon',['../classxms_1_1_tr_outer_triangle_deleter_impl.html#af243755c164dc8b6af8504aa6a037b8d',1,'xms::TrOuterTriangleDeleterImpl']]],
   ['fromstring',['FromString',['../classxms_1_1_tr_tin_impl.html#a1b7c1dacb8e701e5f5229f8a9624c47f',1,'xms::TrTinImpl']]],
   ['fsatisfies',['fSatisfies',['../classxms_1_1f_satisfies.html#ab363650297804f81ac7f6fa1179b6bc0',1,'xms::fSatisfies']]],
-  ['fsatisfies',['fSatisfies',['../classxms_1_1f_satisfies.html',1,'xms']]]
+  ['fsatisfies',['fSatisfies',['../classxms_1_1f_satisfies.html',1,'xms']]],
+  ['functors_2ecpp',['functors.cpp',['https://aquaveo.github.io/xmscore/functors_8cpp.html',1,'']]],
+  ['functors_2eh',['functors.h',['https://aquaveo.github.io/xmscore/functors_8h.html',1,'']]],
+  ['functors_2et_2eh',['functors.t.h',['https://aquaveo.github.io/xmscore/functors_8t_8h.html',1,'']]],
+  ['functorsunittests',['FunctorsUnitTests',['https://aquaveo.github.io/xmscore/class_functors_unit_tests.html',1,'']]]
 ];
