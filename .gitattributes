@@ -8,7 +8,10 @@
 *.h   text
 *.hpp text
 *.hxx text
-*.py
+*.py  text
+*.txt text
+*.md  text
+*.cmake text
 
 # Files that will always have CRLF line endings
 *.bat text eol=crlf
