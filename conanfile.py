@@ -99,7 +99,7 @@ class XmsgeomConan(ConanFile):
                   self.run('pip install --user numpy')
                 else:
                   self.run('pip install numpy')
-                self.run('python -m unittest discover -v -p *_pyt.py -s ../xmsinterp/python', cwd="./lib")
+                self.run('python -m unittest discover -v -p *_pyt.py -s ../xmsgeom/python', cwd="./lib")
 
     def package(self):
         self.copy("*.h", dst="include/xmsgeom", src="xmsgeom")
