@@ -72,6 +72,9 @@ if(IS_PYTHON_BUILD)
       include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11ConfigVersion.cmake")
       include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11Tools.cmake")
   endif()
+  list(APPEND EXT_INCLUDE_DIRS
+    ${PYTHON_INCLUDE_DIRS}
+  )
 endif()
 
 include_directories(${CMAKE_CURRENT_LIST_DIR})
@@ -208,13 +211,11 @@ if(IS_PYTHON_BUILD)
     LINKER_LANGUAGE CXX
   )
 
-  execute_process(COMMAND python -c "import os; print('${PYTHON_SITE_PACKAGES}'.replace('${CONDA_PREFIX}' + os.sep, ''))" OUTPUT_VARIABLE PYTHON_SITE_PACKAGES_TRIMMED OUTPUT_STRIP_TRAILING_WHITESPACE)
-
   # Install recipe
   install(
     TARGETS xmsgeom_py
-    ARCHIVE DESTINATION ${PYTHON_SITE_PACKAGES_TRIMMED}
-    LIBRARY DESTINATION ${PYTHON_SITE_PACKAGES_TRIMMED}
+    ARCHIVE DESTINATION "site-packages"
+    LIBRARY DESTINATION "site-packages"
   )
 endif()
 

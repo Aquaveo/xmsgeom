@@ -2,7 +2,7 @@
 XMSGeom Conanfile and Support
 """
 import os
-from conans import ConanFile, CMake
+from conans import ConanFile, CMake, tools
 from conans.errors import ConanException
 
 
@@ -60,7 +60,7 @@ class XmsgeomConan(ConanFile):
             self.requires("pybind11/2.2.2@aquaveo/stable")
 
         # Use the dev version of XMSCore
-        self.requires("xmscore/[>=1.0.37]@aquaveo/stable")
+        self.requires("xmscore/[>=1.0.40]@aquaveo/stable")
 
     def build(self):
         cmake = CMake(self)
@@ -93,11 +93,20 @@ class XmsgeomConan(ConanFile):
                             no_newline = line.strip('\n')
                             print(no_newline)
                 print("***********(0.0)*************")
+        elif self.options.pybind:
+            with tools.pythonpath(self):
+                if not self.settings.os == "Macos":
+                  self.run('pip install --user numpy')
+                else:
+                  self.run('pip install numpy')
+                self.run('python -m unittest discover -v -p *_pyt.py -s ../xmsinterp/python', cwd="./lib")
 
     def package(self):
         self.copy("*.h", dst="include/xmsgeom", src="xmsgeom")
         self.copy("*.lib", dst="lib", keep_path=False)
         self.copy("*.pyd", dst="lib", keep_path=False)
+        self.copy("*_py.*.so", dst="site-packages", keep_path=False)
+        self.copy("*_py.so", dst="site-packages", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.dylib*", dst="lib", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
@@ -105,6 +114,7 @@ class XmsgeomConan(ConanFile):
         self.copy("license", dst="licenses", ignore_case=True, keep_path=False)
 
     def package_info(self):
+        self.env_info.PYTHONPATH.append(os.path.join(self.package_folder, "site-packages"))
         if self.settings.build_type == 'Debug':
             self.cpp_info.libs = ["xmsgeom_d"]
         else:
