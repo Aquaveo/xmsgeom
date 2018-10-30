@@ -47,9 +47,6 @@ public:
 class GmPolygonIntermediateTests : public CxxTest::TestSuite
 {
 public:
-#ifndef CXXTEST4
-  virtual const CxxTest::TestGroup& group();
-#endif
   void testSpeed();
 }; // GmPolygonIntermediateTests
 #endif

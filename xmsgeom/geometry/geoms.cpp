@@ -2394,17 +2394,6 @@ void GeomsXmsngUnitTests::test_gmPointInPolygon2D_Speed()
 /// \brief Intermediate tests for functions in geoms.cpp
 ////////////////////////////////////////////////////////////////////////////////
 //------------------------------------------------------------------------------
-/// \brief    Defines the test group.
-/// \return CxxTest::TestGroup reference.
-//------------------------------------------------------------------------------
-#ifndef CXXTEST4
-const CxxTest::TestGroup& GeomsXmsngIntermediateTests::group()
-{
-  return *CxxTest::TestGroup::GetGroup(CxxTest::TG_INTERMEDIATE);
-  // return CxxTest::TestSuite::group();
-}
-#endif
-//------------------------------------------------------------------------------
 /// \brief
 /// \verbatim
 // 15 -    0   1   2   3   4
